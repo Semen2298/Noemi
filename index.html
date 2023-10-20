@@ -1,19 +1,54 @@
 <!DOCTYPE html>
-<html lang="r">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noemi</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="pop-up _hidden">
+        <div class="pop-up__wrapper-form">
+            <div class="pop-up-close"></div>
+            <h2 class="now-trending__title pop-up__title">Ваш ФИДБЕк</h2>
+            <form class="pop-up__form">
+                <label class="pop-up__form_label">
+                    <span>Как часто вы заходите на сайт?</span>
+                    <select class="pop-up__form_select" placeholder="Почти каждый день">
+                        <option>Почти каждый день</option>
+                        <option>Раз в несколько дней</option>
+                        <option>Раз в несколько недель</option>
+                        <option>Несколько раз в год</option>
+                    </select>
+                </label>
+                <label class="pop-up__form_label">
+                    <span>Вы подписаны на e-mail рассылку?</span>
+                    <div class="pop-up__form_label-wrapper-flex">
+                        <label for="yes" class="pop-up__form_label-checkbox-wrapper">
+                            <input type="checkbox" id="yes" class="pop-up__form_label-checkbox" required>
+                            <span class="pop-up__form_label-checkbox-text">Да</span>
+                        </label>
+                        <label for="no" class="pop-up__form_label-checkbox-wrapper">
+                            <input type="checkbox" id="no" class="pop-up__form_label-checkbox">
+                        <span class="pop-up__form_label-checkbox-text">Нет</span>
+                        </label>
+                    </div>
+                </label>
+                <label for="" class="pop-up__form_label">
+                    <span>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+                    <textarea class="pop-up__form_label-textarea" placeholder="Может, больше рецептов?"></textarea>
+                </label>
+                <button class="pop-up__form_btn btn">Отправить    </button>
+            </form>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header-flex">
                 <div class="header__logo-wrapper">
                     <a href="#">
-                        <img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" alt="Logo" class="header__logo-img">
+                        <img src="./svg/noemi-logo.svg" alt="Logo" class="header__logo-img">
                     </a>
                 </div>
                 <nav class="header__menu">
@@ -50,26 +85,96 @@
                         </li>
                     </ul>
                 </nav>
+                <div class="bruger-menu-wrapper">
+                    <div class="bruger-menu-line"></div>
+                    <div class="bruger-menu-line"></div>
+                    <div class="bruger-menu-line"></div>
+                </div>
             </div>
             <h1 class="main__title">
                 Блог о творчестве, спорте, и образе жизни
             </h1>
         </div>
     </header>
+    <section class="now-trending">
+        <h2 class="now-trending__title">Сейчас в тренде</h2>
+        <div class="now-trending__cards-wrapper">
+            <div class="now-trending__card trend1">
+                <div class="now-trending__card-offer-wrap">
+                    <div class="now-trending__card-offer-tag-wrap">
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            Lifestyle
+                        </a>
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            INTERIOR
+                        </a>
+                    </div>
+                    <a href="#" class="now-trending__card-offer-title">
+                        Сейчас в тренде: сад  на подоконнике
+                    </a>
+                </div>
+            </div>
+            
+            <div class="now-trending__card trend2">
+                <div class="now-trending__card-offer-wrap">
+                    <div class="now-trending__card-offer-tag-wrap">
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            Food
+                        </a>
+                    </div>
+                    <a href="#" class="now-trending__card-offer-title">
+                        сыры на красивых  картинках из интернета: какие они на вкус?
+                    </a>
+                </div>
+            </div>
+
+            <div class="now-trending__card trend3">
+                <div class="now-trending__card-offer-wrap">
+                    <div class="now-trending__card-offer-tag-wrap">
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            Lifestyle
+                        </a>
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            tRAVEL
+                        </a>
+                    </div>
+                    <a href="#" class="now-trending__card-offer-title">
+                        СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ
+                    </a>
+                </div>
+            </div>
+
+            <div class="now-trending__card trend4">
+                <div class="now-trending__card-offer-wrap">
+                    <div class="now-trending__card-offer-tag-wrap">
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            food
+                        </a>
+                        <a href="#" class="now-trending__card-offer-tag tag">
+                            health
+                        </a>
+                    </div>
+                    <a href="#" class="now-trending__card-offer-title">
+                        Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="news-feed">
         <div class="container">
             <div class="news-feed-flex">
                 <main class="news-feed__main-news-wrapper">
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="Человек идет по пляжу, на фоне две скалы">
+                            <img src="./img/last-post1.jpg" alt="Человек идет по пляжу, на фоне две скалы">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
                             <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     Travel
                                 </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     Health
                                 </a>
                             </div>
@@ -93,15 +198,15 @@
 
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="Девушка на пляже занимается йогой">
+                            <img src="./img/last-post2.jpg" alt="Девушка на пляже занимается йогой">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
-                            <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                            <div class="news-feed__main-news_offer-tag-wrap ">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     health     
    
                                 </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     lifestyle
                                 </a>
                             </div>
@@ -124,11 +229,11 @@
 
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="Девушка на тусе">
+                            <img src="./img/last-post3.jpg" alt="Девушка на тусе">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
                             <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     Music
                                 </a>
                             </div>
@@ -156,14 +261,14 @@
 
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Обеденный стол">
+                            <img src="./img/last-post4.jpg" alt="Обеденный стол">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
                             <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     LYFESTYLE
                                 </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     FOOD
                                 </a>
                             </div>
@@ -186,17 +291,17 @@
 
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="Подушка на кресле с надписью "Hang Out Spot"">
+                            <img src="./img/last-post5.jpg" alt="Подушка на кресле с надписью "Hang Out Spot"">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
                             <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     Lifestyle
                                 </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     INTERIOR
                                 </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
+                                <a href="#" class="news-feed__main-news_offer-tag tag">
                                     art
                                 </a>
                             </div>
@@ -216,66 +321,6 @@
                             </p>
                         </div>
                     </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post6.jpg" alt="Мужчина и женщина на склоне скалы, на фоне леса и холмы">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
-                                    travel
-                                </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
-                                    lifestyle
-                                </a>
-                            </div>
-                            <a href="#" class="news-feed__main-news_offer-title">
-                                Как первый раз отправиться в горы? 
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Для начала нужно определиться, в каком формате пройдёт ваше путешествие. Это зависит от многих факторов, не только от ваших желаний и интересов.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Обеденный стол">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <div class="news-feed__main-news_offer-tag-wrap">
-                                <a href="#" class="news-feed__main-news_offer-tag">
-                                    lifestyle
-                                </a>
-                                <a href="#" class="news-feed__main-news_offer-tag">
-                                    food
-                                </a>
-                            </div>
-                            <a href="#" class="news-feed__main-news_offer-title">
-                                Наукоёмкий подход к кулинарии 
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
-                            </p>
-                        </div>
-                    </article>
                 </main>
                 <aside class="news-feed__info-post_wrapper">
                     <section class="news-feed__info-post_new-post-section-wrap">
@@ -285,7 +330,7 @@
                         <article class="news-feed__info-post_new-post-wrapper">
                             <a href="#" class="news-feed__info-post_new-post">
                                 <figure>
-                                    <img src="https://netology-code.github.io/html-2-diploma/sources/images/2.jpg" alt="Человек идет по пляжу, на фоне две скалы" class="news-feed__info-post_new-post-img">
+                                    <img src="./img/2.jpg" alt="Человек идет по пляжу, на фоне две скалы" class="news-feed__info-post_new-post-img">
                                 </figure>
                                 <div class="news-feed__info-post_new-post-offer">
                                     <span class="news-feed__info-post_new-post-offer-date">
@@ -300,7 +345,7 @@
 
                             <a href="#" class="news-feed__info-post_new-post">
                                 <figure>
-                                    <img src="https://netology-code.github.io/html-2-diploma/sources/images/151.jpg" alt="Девушка на пляже занимается йогой" class="news-feed__info-post_new-post-img">
+                                    <img src="./img/151.jpg" alt="Девушка на пляже занимается йогой" class="news-feed__info-post_new-post-img">
                                 </figure>
                                 <div class="news-feed__info-post_new-post-offer">
                                     <span class="news-feed__info-post_new-post-offer-date">
@@ -314,7 +359,7 @@
 
                             <a href="" class="news-feed__info-post_new-post">
                                 <figure>
-                                    <img src="https://netology-code.github.io/html-2-diploma/sources/images/45.jpg" alt="Стул, ковер, пианино" class="news-feed__info-post_new-post-img">
+                                    <img src="./img/45.jpg" alt="Стул, ковер, пианино" class="news-feed__info-post_new-post-img">
                                 </figure>
                                 <div class="news-feed__info-post_new-post-offer">
                                     <span class="news-feed__info-post_new-post-offer-date">
@@ -328,7 +373,7 @@
 
                             <a href="#" class="news-feed__info-post_new-post">
                                 <figure>
-                                    <img src="https://netology-code.github.io/html-2-diploma/sources/images/501.jpg" alt="Обеденый стол" class="news-feed__info-post_new-post-img">
+                                    <img src="./img/501.jpg" alt="Обеденый стол" class="news-feed__info-post_new-post-img">
                                 </figure>
                                 <div class="news-feed__info-post_new-post-offer">
                                     <span class="news-feed__info-post_new-post-offer-date">
@@ -342,7 +387,7 @@
 
                             <a href="#" class="news-feed__info-post_new-post">
                                 <figure>
-                                    <img src="https://netology-code.github.io/html-2-diploma/sources/images/7.jpg" alt="Три девушки стоят спиной, с длиными волосами" class="news-feed__info-post_new-post-img">
+                                    <img src="./img/7.jpg" alt="Три девушки стоят спиной, с длиными волосами" class="news-feed__info-post_new-post-img">
                                 </figure>
                                 <div class="news-feed__info-post_new-post-offer">
                                     <span class="news-feed__info-post_new-post-offer-date">
@@ -381,42 +426,42 @@
                         </h3>
                         <ul class="news-feed__info-post_tag-wrapper">
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     Fashion
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     MuSiC
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     lifestyle
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     art
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     INTERIOR
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     travel
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     food
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="news-feed__info-post_tag">
+                                <a href="#" class="news-feed__info-post_tag tag">
                                     Health
                                 </a>
                             </li>
@@ -481,6 +526,84 @@
             </div>
         </div>
     </div>
+    <section class="our-products">
+        <div class="container">
+            <h2 class="now-trending__title">Наши изделия</h2>
+            <div class="our-products__cards-wrapper">
+                <div class="our-products__card">
+                    <img src="./img/shop-item-desk1.jpg" alt="" class="our-products__card-img">
+                    <div class="our-products__card-offer">
+                        <h2 class="our-products__card_title">
+                            Подушки на диван
+                        </h2>
+                        <p class="our-products__card_text">
+                            Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="our-products__card_text-link">здесь</a>.
+                        </p>
+                        <div class="our-products__card_price-btn">
+                            <div class="our-products__card_price-wrap">
+                                <span class="our-products__card_price">
+                                    1000 Р
+                                </span>
+                                <span class="our-products__card_price-discount">
+                                    800 Р
+                                </span>
+                            </div>
+                            <a href="#" class="our-products__card_btn btn">
+                                В магазин    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-products__card">
+                    <img src="./img/shop-item-desk2.jpg" alt="" class="our-products__card-img">
+                    <div class="our-products__card-offer">
+                        <h2 class="our-products__card_title">
+                            Кукла «Зайчик»
+                        </h2>
+                        <p class="our-products__card_text">
+                            Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="our-products__card_text-link">весенная серия постов</a> в блоге и несколько подкастов.
+                        </p>
+                        <div class="our-products__card_price-btn">
+                            <div class="our-products__card_price-wrap">
+                                <span class="our-products__card_price-discount">
+                                    3500 Р
+                                </span>
+                            </div>
+                            <a href="#" class="our-products__card_btn btn">
+                                В магазин    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-products__card">
+                    <img src="./img/shop-item-desk3.jpg" alt="" class="our-products__card-img">
+                    <div class="our-products__card-offer">
+                        <h2 class="our-products__card_title">
+                            Шестиугольная рамка
+                        </h2>
+                        <p class="our-products__card_text">
+                            Необычная рамка для украшения дома из видео <a href="#" class="our-products__card_text-link">«Как сделать рамку из подручных средств за 30 минут»</a>
+                        </p>
+                        <div class="our-products__card_price-btn">
+                            <div class="our-products__card_price-wrap">
+                                <span class="our-products__card_price">
+                                    500 Р
+                                </span>
+                                <span class="our-products__card_price-discount">
+                                    400 Р
+                                </span>
+                            </div>
+                            <a href="#" class="our-products__card_btn btn">
+                                В магазин    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <adress class="footer__icon-link-wrapper">

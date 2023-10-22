@@ -181,7 +181,7 @@ a {
 .pop-up__form_label-textarea {
     font-family: "Open Sans Regular";
     min-height: 130px;
-    width: 100%;
+    width: 90%;
     max-width: 354px;
     color: rgba(0,0,0,0.6);
     background-color: rgba(244, 247, 246, 1);
@@ -209,6 +209,9 @@ a {
     background-size: cover;
     background-position: center top;
     padding-top: 28px;
+}
+.header__logo-mobile-wrapper {
+    display: none;
 }
 .header-flex {
     display: flex;
@@ -652,7 +655,7 @@ footer {
 
 @media (max-width: 1200px) {
     .container {
-        width: 670px;
+        max-width: 670px;
     }
     .header {
         background: linear-gradient(90deg, rgba(10,12,25,0.6) 0%, rgba(10,16,30,0.6) 100%), url(../img/banner-bg-tablet.jpg);
@@ -708,10 +711,85 @@ footer {
     }
     .our-products__card {
         width: 48%;
+        margin-top: 194px;
+    }
+    .our-products__card-img {
+        top: -194px;
     }
 }
 @media (max-width: 741px) {
     .container {
+        width: 90%;
+    }
+    .header {
+        background: linear-gradient(90deg, rgba(10,12,25,0.6) 0%, rgba(10,16,30,0.6) 100%), url(../img/banner-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+    }
+    .header-flex {
+        justify-content: flex-end;
+    }
+    .header__logo-wrapper {
+        display: none;
+    }
+    .header__logo-mobile-wrapper {
+        display: block;
+        padding-top: 170px;
+    }
+    .main__title {
+        padding: 40px 0 215px;
+        font-size: 26px;
+        width: 90%;
+        line-height: 36px;
+    }
+    .header__logo-img {
+        height: 61px;
+    }
+    .news-feed-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 43px;
+    }
+    .our-products__cards-wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+    .trend1, .trend2, .trend3, .trend4  {
+        width: 90%;
+        background-position: center;
+    }
+    .now-trending__card {
+        justify-content: center;
+    }
+    .our-products__card {
+        max-width: 350px;
+        width: 90%;
+        margin-top: 254px;
+    }
+    .our-products__card-img {
+        top: -254px;
+    }
+    .news-feed__main-news_offer-wrapper {
+        width: 90%;
+    }
+    .news-feed__main-news-wrapper {
         width: 100%;
+    }
+    .news-feed__main-news_img-wrapper {
+        width: auto;
+        height: auto;
+    }
+    .news-feed__main-news_img-wrapper img {
+        width: 100%;
+    }
+    .pop-up__wrapper-form {
+        max-width: 90%;
+        box-sizing: border-box;
+    }
+    .pop-up__form_label-textarea {
+        max-width: 90%;
+        min-height: 30px;
     }
 }

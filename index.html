@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="pop-up _hidden">
+    <div class="pop-up _hidden1">
         <div class="pop-up__wrapper-form">
             <div class="pop-up-close"></div>
             <h2 class="now-trending__title pop-up__title">Ваш ФИДБЕк</h2>
@@ -22,7 +22,7 @@
                         <option>Несколько раз в год</option>
                     </select>
                 </label>
-                <label class="pop-up__form_label">
+                <div class="pop-up__form_label">
                     <span>Вы подписаны на e-mail рассылку?</span>
                     <div class="pop-up__form_label-wrapper-flex">
                         <label for="yes" class="pop-up__form_label-checkbox-wrapper">
@@ -34,8 +34,8 @@
                         <span class="pop-up__form_label-checkbox-text">Нет</span>
                         </label>
                     </div>
-                </label>
-                <label for="" class="pop-up__form_label">
+                </div>
+                <label class="pop-up__form_label">
                     <span>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
                     <textarea class="pop-up__form_label-textarea" placeholder="Может, больше рецептов?"></textarea>
                 </label>
@@ -90,6 +90,11 @@
                     <div class="bruger-menu-line"></div>
                     <div class="bruger-menu-line"></div>
                 </div>
+            </div>
+            <div class="header__logo-mobile-wrapper">
+                <a href="#">
+                    <img src="./svg/noemi-logo.svg" alt="Logo" class="header__logo-img">
+                </a>
             </div>
             <h1 class="main__title">
                 Блог о творчестве, спорте, и образе жизни
@@ -291,7 +296,7 @@
 
                     <article class="news-feed__main-news">
                         <figure class="news-feed__main-news_img-wrapper">
-                            <img src="./img/last-post5.jpg" alt="Подушка на кресле с надписью "Hang Out Spot"">
+                            <img src="./img/last-post5.jpg" alt="Подушка на кресле с надписью 'Hang Out Spot'">
                         </figure>
                         <div class="news-feed__main-news_offer-wrapper">
                             <div class="news-feed__main-news_offer-tag-wrap">
@@ -531,7 +536,18 @@
             <h2 class="now-trending__title">Наши изделия</h2>
             <div class="our-products__cards-wrapper">
                 <div class="our-products__card">
-                    <img src="./img/shop-item-desk1.jpg" alt="" class="our-products__card-img">
+                    <picture class="our-products__card-img">
+                        <source 
+                            srcset="./img/shop-item-desk1.jpg"
+                            media="(min-width: 1201px)">
+                        <source 
+                            srcset="./img/shop-item-tablet1.jpg"
+                            media="(min-width: 741px)">
+                        <source 
+                            srcset="./img/shop-item-mobile1.jpg"
+                            media="(min-width: 0px)">
+                        <img src="./img/shop-item-desk1.jpg" alt="">
+                    </picture>
                     <div class="our-products__card-offer">
                         <h2 class="our-products__card_title">
                             Подушки на диван
@@ -556,7 +572,18 @@
                 </div>
 
                 <div class="our-products__card">
-                    <img src="./img/shop-item-desk2.jpg" alt="" class="our-products__card-img">
+                    <picture class="our-products__card-img">
+                        <source 
+                            srcset="./img/shop-item-desk2.jpg"
+                            media="(min-width: 1201px)">
+                        <source 
+                            srcset="./img/shop-item-tablet2.jpg"
+                            media="(min-width: 741px)">
+                        <source 
+                            srcset="./img/shop-item-mobile2.jpg"
+                            media="(min-width: 0px)">
+                        <img src="./img/shop-item-desk2.jpg" alt="">
+                    </picture>
                     <div class="our-products__card-offer">
                         <h2 class="our-products__card_title">
                             Кукла «Зайчик»
@@ -578,7 +605,18 @@
                 </div>
 
                 <div class="our-products__card">
-                    <img src="./img/shop-item-desk3.jpg" alt="" class="our-products__card-img">
+                    <picture class="our-products__card-img">
+                        <source 
+                            srcset="./img/shop-item-desk3.jpg"
+                            media="(min-width: 1201px)">
+                        <source 
+                            srcset="./img/shop-item-tablet3.jpg"
+                            media="(min-width: 741px)">
+                        <source 
+                            srcset="./img/shop-item-mobile3.jpg"
+                            media="(min-width: 0px)">
+                        <img src="./img/shop-item-desk3.jpg" alt="">
+                    </picture>
                     <div class="our-products__card-offer">
                         <h2 class="our-products__card_title">
                             Шестиугольная рамка

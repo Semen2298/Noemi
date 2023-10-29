@@ -188,6 +188,7 @@ a {
     background-color: rgba(244, 247, 246, 1);
     padding: 18px 14px 18px 18px;
     border: 2px solid transparent;
+    resize: none;
 }
 .pop-up__form_label-textarea:focus {
     transition: all 0s ease;
@@ -261,7 +262,8 @@ a.header__menu-link:hover {
 .now-trending__cards-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4px;
 }
 .trend1 {
     background-image: linear-gradient( transparent, rgba(0,0,0,0.6) 0), url(../img/trend1.jpg);
@@ -389,7 +391,7 @@ a.header__menu-link:hover {
 .news-feed__main-news_offer-text {
     font-size: 15px;
     line-height: 22px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .news-feed__main-news_offer-text-wrap:first-child {
     margin-bottom: 15px;
@@ -468,6 +470,13 @@ a.header__menu-link:hover {
     padding: 18px 0 18px 18px;
     border: none;
     background: #f4f7f6;
+    outline: none;
+    box-shadow: none;
+}
+.news-feed__info-post_new-post-input:focus, .news-feed__info-post_mailing-input:focus {
+    outline: 1px solid #b59f5b;
+    outline-offset: -1px;
+    transition: all 0s ease 0s;
 }
 .news-feed__info-post_new-post-btn {
     background-color: #b59f5b;
@@ -489,6 +498,8 @@ a.header__menu-link:hover {
     background: #f4f7f6;
     box-sizing: border-box;
     margin-bottom: 18px;
+    outline: none;
+    box-shadow: none;
 }
 .news-feed__info-post_mailing-btn {
     width: 100%;
@@ -505,6 +516,7 @@ a.header__menu-link:hover {
     padding: 0 12px;
     color: #0f0d0e;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 12px;
     font-weight: 700;
     height: 30px;
@@ -513,6 +525,7 @@ a.header__menu-link:hover {
     align-items: center;
     justify-content: center;
 }
+
 .news-feed__info-post_tag:hover {
     border: 3px solid #b59f5b;
 }
@@ -548,7 +561,6 @@ a.header__menu-link:hover {
 }
 .our-products__cards-wrapper {
     display: flex;
-    align-items: start;
     justify-content: space-between;
 }
 .our-products__card {
@@ -559,8 +571,6 @@ a.header__menu-link:hover {
     display: flex;
     justify-content: center;
     margin-top: 172px;
-    width: 350px;
-    height: 270px;
 }
 .our-products__card-offer {
     z-index: 5;

@@ -108,11 +108,7 @@ a {
     padding: 55px 30px;
     width: 390px;
 }
-<<<<<<< HEAD
-.pop-up-close::before {
-=======
-/* .pop-up__wrapper-form::before {
->>>>>>> ff7d5f8bd82517a3c950f26e86f77ea87a6c9dea
+/*.pop-up-close::before {
     content: "";
     position: absolute;
     top: -28px;

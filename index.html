@@ -1,707 +1,1245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noemi</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="pop-up">
-        <div class="pop-up__wrapper-form">
-            <div class="pop-up-close"></div>
-            <h2 class="now-trending__title pop-up__title">Ваш ФИДБЕк</h2>
-            <form class="pop-up__form">
-                <label class="pop-up__form_label">
-                    <span>Как часто вы заходите на сайт?</span>
-                    <select class="pop-up__form_select">
-                        <option>Почти каждый день</option>
-                        <option>Раз в несколько дней</option>
-                        <option>Раз в несколько недель</option>
-                        <option>Несколько раз в год</option>
-                    </select>
-                </label>
-                <div class="pop-up__form_label">
-                    <span>Вы подписаны на e-mail рассылку?</span>
-                    <div class="pop-up__form_label-wrapper-flex">
-                        <label for="yes" class="pop-up__form_label-checkbox-wrapper">
-                            <input type="checkbox" id="yes" class="pop-up__form_label-checkbox" required>
-                            <span class="pop-up__form_label-checkbox-text">Да</span>
-                        </label>
-                        <label for="no" class="pop-up__form_label-checkbox-wrapper">
-                            <input type="checkbox" id="no" class="pop-up__form_label-checkbox">
-                        <span class="pop-up__form_label-checkbox-text">Нет</span>
-                        </label>
-                    </div>
-                </div>
-                <label class="pop-up__form_label">
-                    <span>Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-                    <textarea class="pop-up__form_label-textarea" placeholder="Может, больше рецептов?"></textarea>
-                </label>
-                <button class="pop-up__form_btn btn">Отправить</button>
-            </form>
-        </div>
-    </div>
-    <header class="header">
-        <div class="container">
-            <div class="header-flex">
-                <div class="header__logo-wrapper">
-                    <a href="#">
-                        <img src="svg/noemi-logo.svg" alt="Logo" class="header__logo-img">
-                    </a>
-                </div>
-                <nav class="header__menu">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                посты
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                статьи
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                Теги
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                темы
-                            </a>
-                        </li>
-                        <li class="header__menu-item">
-                            <a href="#" class="header__menu-link">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="bruger-menu-wrapper">
-                    <div class="bruger-menu-line"></div>
-                    <div class="bruger-menu-line"></div>
-                    <div class="bruger-menu-line"></div>
-                </div>
-            </div>
-            <div class="header__logo-mobile-wrapper">
-                <a href="#">
-                    <img src="svg/noemi-logo.svg" alt="Logo" class="header__logo-img">
-                </a>
-            </div>
-            <h1 class="main__title">
-                Блог о творчестве, спорте, и образе жизни
-            </h1>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Истории для жизни в своём ритме — Noémi</title>
+    <meta
+      name="description"
+      content="Путешествия рядом, уютный дом, простая еда и вещи своими руками. Читайте Noémi, выбирайте рубрики и откладывайте понравившиеся истории."
+    />
+    <meta name="theme-color" content="#18121e" />
+    <meta property="og:title" content="Истории для жизни в своём ритме — Noémi" />
+    <meta
+      property="og:description"
+      content="Путешествия рядом, уютный дом, простая еда и вещи своими руками. Читайте Noémi, выбирайте рубрики и откладывайте понравившиеся истории."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <link rel="icon" href="svg/icon-bookmark.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="fonts/Literata-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/OpenSans-Regular-subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body
+    id="top"
+    data-page="home"
+    data-story=""
+    data-stories="pervaya-tropa,utro-u-morya,zelen-na-podokonnike,vecher-s-muzykoy,stol-bez-povoda,mesto-dlya-utra,chehol-dlya-podushki,ramka-dlya-doma,loskutnyy-zayats"
+  >
+    <svg
+      class="icon-definitions"
+      xmlns="http://www.w3.org/2000/svg"
+      width="0"
+      height="0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <symbol
+          id="icon-arrow-up"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </symbol>
+        <symbol
+          id="icon-bookmark-check"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"
+          />
+          <path d="m9 10 2 2 4-4" />
+        </symbol>
+        <symbol
+          id="icon-bookmark"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M17 3a2 2 0 0 1 2 2v15a1 1 0 0 1-1.496.868l-4.512-2.578a2 2 0 0 0-1.984 0l-4.512 2.578A1 1 0 0 1 5 20V5a2 2 0 0 1 2-2z"
+          />
+        </symbol>
+        <symbol
+          id="icon-check"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 6 9 17l-5-5" />
+        </symbol>
+        <symbol
+          id="icon-chevron-down"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </symbol>
+        <symbol
+          id="icon-link"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+        </symbol>
+        <symbol
+          id="icon-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 5h16" />
+          <path d="M4 12h16" />
+          <path d="M4 19h16" />
+        </symbol>
+        <symbol
+          id="icon-search"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m21 21-4.34-4.34" />
+          <circle cx="11" cy="11" r="8" />
+        </symbol>
+        <symbol
+          id="icon-x"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </symbol>
+        <symbol id="noemi-brand" fill="none" viewBox="0 0 3070 696">
+          <path
+            fill="#B59F5B"
+            d="M485.331 135.438V696h-3.762L105.343 353.643l3.762 319.784H0V112.865h3.7623L379.988 458.984l-3.762-323.546h109.105Z"
+          />
+          <path
+            fill="#fff"
+            stroke="#E8E8E8"
+            d="m861.808 165.967.009-.005.008-.005c41.291-26.275 86.341-37.543 138.935-37.543 52.58 0 93.88 11.261 138.94 37.548 41.32 26.295 75.13 60.101 101.42 101.42 26.28 41.293 37.55 86.343 37.55 135.169 0 48.823-11.27 93.882-37.56 138.948-26.28 45.059-60.08 75.103-101.42 101.409-41.29 26.275-86.34 37.543-138.93 37.543-48.821 0-93.878-11.263-138.943-37.548-41.335-26.305-75.126-56.348-101.41-101.404-26.287-45.063-37.551-86.355-37.554-138.927 3.76-45.089 15.032-93.909 37.553-135.204 26.304-41.331 56.348-75.12 101.402-101.401Zm-4.448 327.124c15.076 26.384 33.944 49.036 60.382 64.143 26.411 15.092 52.832 22.639 86.778 22.639 30.19 0 56.61-7.55 83.02-22.639 26.44-15.107 45.31-37.759 60.38-64.143 15.1-26.414 22.64-56.598 22.64-86.777 0-33.948-7.55-60.368-22.64-86.778-15.07-26.383-33.94-49.036-60.38-64.143-26.41-15.089-52.83-22.639-83.02-22.639-30.102 0-64.128 3.754-86.85 22.689l-.032.027c-22.552 18.793-45.184 37.652-60.278 64.066-15.095 26.415-22.639 56.598-22.639 86.778 0 30.179 7.544 60.363 22.639 86.777ZM1617.77 572.349h270.38v100.578h-371.46V135.938h363.94v100.578h-263.36v117.627h233.26v100.579h-233.26v117.627h.5ZM1834.67.5l-107.99 96.8162h-62.87L1723.39.5h111.28ZM2584.26 417.31l-176.42 247.736-168.89-232.691-.91-1.247v241.819h-100.58V114.453l269.97 386.201.41.574.41-.566 281.26-386.261v558.526h-104.34V416.036l-.91 1.274ZM3069.5 135.938v536.989h-104.34V135.938h104.34Z"
+          />
+        </symbol>
+      </defs></svg
+    ><a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <header class="header header--home">
+      <div class="container header__inner">
+        <a class="header__logo" href="index.html" aria-label="Noémi — главная"
+          ><svg
+            class="brand-mark"
+            width="154"
+            height="35"
+            viewBox="0 0 3070 696"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="#noemi-brand"></use></svg></a
+        ><button
+          class="header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          aria-label="Открыть меню"
+          hidden
+        >
+          <svg
+            class="icon icon--menu"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="#icon-menu"></use></svg
+          ><svg
+            class="icon icon--menu-close"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="#icon-x"></use></svg
+          ><span>Меню</span>
+        </button>
+        <nav class="header__menu" id="site-menu" aria-label="Главная навигация">
+          <a href="index.html#journal">Журнал</a><a href="index.html#collections">Подборки</a
+          ><a href="index.html#workshop">Мастерская</a><a href="index.html#about">О Noémi</a>
+        </nav>
+        <a class="header__saved" href="index.html?saved=1#journal" hidden
+          ><svg
+            class="icon icon--bookmark"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="#icon-bookmark"></use></svg
+          ><span>Отложенное</span><span class="header__count" data-saved-count>0</span></a
+        >
+      </div>
     </header>
-    <section class="now-trending">
-        <h2 class="now-trending__title">Сейчас в тренде</h2>
-        <div class="now-trending__cards-wrapper">
-            <div class="now-trending__card trend1">
-                <div class="now-trending__card-offer-wrap">
-                    <ul class="now-trending__card-offer-tag-wrap">
-                        <li>
-                            <a href="#" class="now-trending__card-offer-tag tag">
-                                Lifestyle
-                            </a></li>
-                        <li>
-                            <a href="#" class="now-trending__card-offer-tag tag">
-                                INTERIOR
-                            </a></li>
-                    </ul>
-                    <a href="#">
-                        <h2 class="now-trending__card-offer-title">
-                            Сейчас в тренде: сад  на подоконнике
-                        </h2>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="now-trending__card trend2">
-                <div class="now-trending__card-offer-wrap">
-                    <ul class="now-trending__card-offer-tag-wrap">
-                        <li>
-                            <a href="#" class="now-trending__card-offer-tag tag">
-                            Food
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#">
-                        <h2 class="now-trending__card-offer-title">
-                            сыры на красивых  картинках из интернета: какие они на вкус?
-                        </h2>
-                    </a>
-                </div>
-            </div>
-
-            <div class="now-trending__card trend3">
-                <div class="now-trending__card-offer-wrap">
-                    <ul class="now-trending__card-offer-tag-wrap">
-                        <li><a href="#" class="now-trending__card-offer-tag tag">
-                            Lifestyle
-                        </a></li>
-                        <li><a href="#" class="now-trending__card-offer-tag tag">
-                            tRAVEL
-                        </a></li>
-                    </ul>
-                    <a href="#">
-                        <h2 class="now-trending__card-offer-title">
-                            СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ
-                        </h2>
-                    </a>
-                </div>
-            </div>
-
-            <div class="now-trending__card trend4">
-                <div class="now-trending__card-offer-wrap">
-                    <ul class="now-trending__card-offer-tag-wrap">
-                        <li>
-                            <a href="#" class="now-trending__card-offer-tag tag">
-                                food
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="now-trending__card-offer-tag tag">
-                                health
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="#">
-                        <h2 class="now-trending__card-offer-title">
-                            Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?
-                        </h2>
-                    </a>
-                </div>
-            </div>
+    <main id="main-content" tabindex="-1">
+      <section class="feature" aria-labelledby="feature-title">
+        <picture class="feature__picture"
+          ><source
+            media="(max-width: 600px)"
+            srcset="
+              img/banner-mobile-320.webp 320w,
+              img/banner-mobile-480.webp 480w,
+              img/banner-mobile-640.webp 640w
+            "
+            sizes="100vw" />
+          <source
+            media="(max-width: 1100px)"
+            srcset="
+              img/banner-bg-tablet-600.webp   600w,
+              img/banner-bg-tablet-900.webp   900w,
+              img/banner-bg-tablet-1200.webp 1200w
+            "
+            sizes="100vw" />
+          <img
+            src="img/banner-bg.webp"
+            srcset="img/banner-bg-1200.webp 1200w, img/banner-bg.webp 1660w"
+            sizes="100vw"
+            width="1660"
+            height="523"
+            alt="Зелёный фьорд и тропа над водой"
+            fetchpriority="high"
+        /></picture>
+        <div class="container feature__inner">
+          <div class="feature__story">
+            <p class="feature__note">История для ближайших выходных</p>
+            <h1 id="feature-title">Иногда лучший план —<br />просто выйти на тропу.</h1>
+            <p class="feature__desc">
+              Небольшой маршрут, удобный рюкзак и день, в котором можно никуда не спешить.
+            </p>
+            <a class="button button--light" href="articles/pervaya-tropa.html">Читать историю</a>
+          </div>
         </div>
-    </section>
-    <div class="news-feed">
+      </section>
+      <section class="collections" id="collections" aria-labelledby="collections-title">
         <div class="container">
-            <div class="news-feed-flex">
-                <main class="news-feed__main-news-wrapper">
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="img/last-post1.jpg" alt="Человек идет по пляжу, на фоне две скалы">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <ul class="news-feed__main-news_offer-tag-wrap">
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        Travel
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        Health
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#">
-                                <h2 class="news-feed__main-news_offer-title">
-                                    10 мест, ради которых стоит
-                                    проснуться на рассвете
-                                </h2>
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="img/last-post2.jpg" alt="Девушка на пляже занимается йогой">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <ul class="news-feed__main-news_offer-tag-wrap ">
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        health     
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        lifestyle
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#">
-                                <h2 class="news-feed__main-news_offer-title">
-                                    ЙОга для начинающих в домашних условиях
-                                </h2>
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="img/last-post3.jpg" alt="Девушка на тусе">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <ul class="news-feed__main-news_offer-tag-wrap">
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        Music
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#">
-                                <h2 class="news-feed__main-news_offer-title">
-                                    Лучшие музыкальные фестивали этого лета
-                                </h2>
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <div class="news-feed__main-news_offer-text-wrap">
-                                <p class="news-feed__main-news_offer-text">
-                                    Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?
-                                </p>
-                                <p class="news-feed__main-news_offer-text">
-                                    Мы составили список лучших летних фестивалей по всему миру.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="img/last-post4.jpg" alt="Обеденный стол">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <ul class="news-feed__main-news_offer-tag-wrap">
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        LYFESTYLE
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        FOOD
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#">
-                                <h2 class="news-feed__main-news_offer-title">
-                                    Наукоёмкий подход к кулинарии
-                                </h2>
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="news-feed__main-news">
-                        <figure class="news-feed__main-news_img-wrapper">
-                            <img src="img/last-post5.jpg" alt="Подушка на кресле с надписью 'Hang Out Spot'">
-                        </figure>
-                        <div class="news-feed__main-news_offer-wrapper">
-                            <ul class="news-feed__main-news_offer-tag-wrap">
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        Lifestyle
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        INTERIOR
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="news-feed__main-news_offer-tag tag">
-                                        art
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#">
-                                <h2 class="news-feed__main-news_offer-title">
-                                    делаем модные принты на подушках для интерьера 
-                                </h2>
-                            </a>
-                            <div class="news-feed__main-news_offer-date-wrap">
-                                <span class="news-feed__main-news_offer-date">
-                                    10 июня 2019    
-                                </span>
-                                <span class="news-feed__main-news_offer-author">
-                                    Неизвестный автор    
-                                </span>
-                            </div>
-                            <p class="news-feed__main-news_offer-text">
-                                Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.
-                            </p>
-                        </div>
-                    </article>
-                </main>
-                <aside class="news-feed__info-post_wrapper">
-                    <section class="news-feed__info-post_new-post-section-wrap">
-                        <h3 class="news-feed__info-post_new-post-title">
-                            Новые посты
-                        </h3>
-                        <article class="news-feed__info-post_new-post-wrapper">
-                            <a href="#" class="news-feed__info-post_new-post">
-                                <figure>
-                                    <img src="img/2.jpg" alt="Человек идет по пляжу, на фоне две скалы" class="news-feed__info-post_new-post-img">
-                                </figure>
-                                <div class="news-feed__info-post_new-post-offer">
-                                    <span class="news-feed__info-post_new-post-offer-date">
-                                        14 июня 2019
-                                    </span>
-                                    <h3 class="news-feed__info-post_new-post-offer-title">
-                                        10 мест, ради которых
-                                        стоит проснуться       
-                                    </h3>
-                                </div>
-                            </a>
-
-                            <a href="#" class="news-feed__info-post_new-post">
-                                <figure>
-                                    <img src="img/151.jpg" alt="Девушка на пляже занимается йогой" class="news-feed__info-post_new-post-img">
-                                </figure>
-                                <div class="news-feed__info-post_new-post-offer">
-                                    <span class="news-feed__info-post_new-post-offer-date">
-                                        14 июня 2019
-                                    </span>
-                                    <h3 class="news-feed__info-post_new-post-offer-title">
-                                        Йога для домашних
-                                    </h3>
-                                </div>
-                            </a>
-
-                            <a href="" class="news-feed__info-post_new-post">
-                                <figure>
-                                    <img src="img/45.jpg" alt="Стул, ковер, пианино" class="news-feed__info-post_new-post-img">
-                                </figure>
-                                <div class="news-feed__info-post_new-post-offer">
-                                    <span class="news-feed__info-post_new-post-offer-date">
-                                        14 июня 2019
-                                    </span>
-                                    <h3 class="news-feed__info-post_new-post-offer-title">
-                                        как мы превратили классное место в балкон
-                                    </h3>
-                                </div>
-                            </a>
-
-                            <a href="#" class="news-feed__info-post_new-post">
-                                <figure>
-                                    <img src="img/501.jpg" alt="Обеденый стол" class="news-feed__info-post_new-post-img">
-                                </figure>
-                                <div class="news-feed__info-post_new-post-offer">
-                                    <span class="news-feed__info-post_new-post-offer-date">
-                                        14 июня 2019
-                                    </span>
-                                    <h3 class="news-feed__info-post_new-post-offer-title">
-                                        Кулинарный подход к науке
-                                    </h3>
-                                </div>
-                            </a>
-
-                            <a href="#" class="news-feed__info-post_new-post">
-                                <figure>
-                                    <img src="img/7.jpg" alt="Три девушки стоят спиной, с длиными волосами" class="news-feed__info-post_new-post-img">
-                                </figure>
-                                <div class="news-feed__info-post_new-post-offer">
-                                    <span class="news-feed__info-post_new-post-offer-date">
-                                        14 июня 2019
-                                    </span>
-                                    <h3 class="news-feed__info-post_new-post-offer-title">
-                                        лучшие прически для распущенных волос
-                                    </h3>
-                                </div>
-                            </a>
-                        </article>
-                        <form class="news-feed__info-post_new-post-form">
-                            <input type="search" class="news-feed__info-post_new-post-input" placeholder="Найти...">
-                              <span class="visually-hidden">найти</span>
-                            <button type="button" class="news-feed__info-post_new-post-btn"></button>
-                        </form>
-                    </section>
-                    <section class="news-feed__info-post_new-post-section-wrap">
-                        <h3 class="news-feed__info-post_new-post-title">
-                            Рассылка
-                        </h3>
-                        <form class="news-feed__info-post_mailing-form">
-                            <label>
-                                <input type="email" class="news-feed__info-post_mailing-input" name="query" placeholder="Ваш email-адрес" required>
-                              <span class="visually-hidden">найти</span>
-                            </label>
-                            <button type="submit" class="news-feed__info-post_mailing-btn btn">
-                                Подписаться
-                              <span class="visually-hidden">подписаться</span>
-                            </button>
-                        </form>
-                    </section>
-                    <section class="news-feed__info-post_new-post-section-wrap">
-                        <h3 class="news-feed__info-post_new-post-title">
-                            теги
-                        </h3>
-                        <ul class="news-feed__info-post_tag-wrapper">
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    Fashion
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    MuSiC
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    lifestyle
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    art
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    INTERIOR
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    travel
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    food
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="news-feed__info-post_tag">
-                                    Health
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="news-feed__info-post_new-post-section-wrap">
-                        <h3 class="news-feed__info-post_new-post-title">
-                            темы
-                        </h3>
-                        <ul class="news-feed__info-post_theme-list">
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Красота
-                                    <span class="news-feed__info-post_theme-number">
-                                        12
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Здоровье
-                                    <span class="news-feed__info-post_theme-number">
-                                        4
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Образ жизни
-                                    <span class="news-feed__info-post_theme-number">
-                                        145
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Музыка
-                                    <span class="news-feed__info-post_theme-number">
-                                        28
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Спорт
-                                    <span class="news-feed__info-post_theme-number">
-                                        62
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="news-feed__info-post_theme-item">
-                                <a href="#" class="news-feed__info-post_theme-link">
-                                    Йога
-                                    <span class="news-feed__info-post_theme-number">
-                                        8
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </aside>
-            </div>
+          <div class="section-heading">
+            <h2 id="collections-title">С чего начнём?</h2>
+            <p>Четыре повода посмотреть на привычное чуть внимательнее.</p>
+          </div>
+          <div class="collections__grid">
+            <a class="collection" href="articles/zelen-na-podokonnike.html"
+              ><img
+                class=""
+                src="img/trend1.webp"
+                width="450"
+                height="348"
+                alt="Дать зелени место"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="collection__frame">
+                <h3>Дать зелени место</h3>
+                <p>На подоконнике и в планах</p>
+              </div></a
+            ><a class="collection" href="articles/stol-bez-povoda.html"
+              ><img
+                class=""
+                src="img/trend2.webp"
+                width="450"
+                height="348"
+                alt="Накрыть без повода"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="collection__frame">
+                <h3>Накрыть без повода</h3>
+                <p>Обычный ужин тоже считается</p>
+              </div></a
+            ><a class="collection" href="articles/pervaya-tropa.html"
+              ><img
+                class=""
+                src="img/trend3.webp"
+                width="450"
+                height="348"
+                alt="Свернуть с привычного"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="collection__frame">
+                <h3>Свернуть с привычного</h3>
+                <p>Небольшие путешествия рядом</p>
+              </div></a
+            ><a class="collection" href="articles/chehol-dlya-podushki.html"
+              ><img
+                class=""
+                src="img/last-post5.webp"
+                width="381"
+                height="294"
+                alt="Сделать по-своему"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="collection__frame">
+                <h3>Сделать по-своему</h3>
+                <p>Простые вещи для дома</p>
+              </div></a
+            >
+          </div>
         </div>
-    </div>
-    <section class="our-products">
+      </section>
+      <section class="journal" id="journal" aria-labelledby="journal-title">
         <div class="container">
-            <h2 class="now-trending__title">Наши изделия</h2>
-            <div class="our-products__cards-wrapper">
-                <div class="our-products__card">
-                    <picture class="our-products__card-img">
-                        <source 
-                            srcset="./img/shop-item-desk1.jpg"
-                            media="(min-width: 1201px)">
-                        <source 
-                            srcset="./img/shop-item-tablet1.jpg"
-                            media="(min-width: 741px)">
-                        <source 
-                            srcset="./img/shop-item-mobile1.jpg"
-                            media="(min-width: 0px)">
-                        <img src="img/shop-item-desk1.jpg" alt="">
-                    </picture>
-                    <div class="our-products__card-offer">
-                        <h2 class="our-products__card_title">
-                            Подушки на диван
-                        </h2>
-                        <p class="our-products__card_text">
-                            Набор из двух подушек с модными принтами. Видео о создании <a href="#" class="our-products__card_text-link">здесь</a>.
-                        </p>
-                        <div class="our-products__card_price-btn">
-                            <div class="our-products__card_price-wrap">
-                                <span class="our-products__card_price">
-                                    1000 Р
-                                </span>
-                                <span class="our-products__card_price-discount">
-                                    800 Р
-                                </span>
-                            </div>
-                            <a href="#" class="our-products__card_btn btn">
-                                В магазин    
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="our-products__card">
-                    <picture class="our-products__card-img">
-                        <source 
-                            srcset="./img/shop-item-desk2.jpg"
-                            media="(min-width: 1201px)">
-                        <source 
-                            srcset="./img/shop-item-tablet2.jpg"
-                            media="(min-width: 741px)">
-                        <source 
-                            srcset="./img/shop-item-mobile2.jpg"
-                            media="(min-width: 0px)">
-                        <img src="img/shop-item-desk2.jpg" alt="">
-                    </picture>
-                    <div class="our-products__card-offer">
-                        <h2 class="our-products__card_title">
-                            Кукла «Зайчик»
-                        </h2>
-                        <p class="our-products__card_text">
-                            Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#" class="our-products__card_text-link">весенная серия постов</a> в блоге и несколько подкастов.
-                        </p>
-                        <div class="our-products__card_price-btn">
-                            <div class="our-products__card_price-wrap">
-                                <span class="our-products__card_price-discount">
-                                    3500 Р
-                                </span>
-                            </div>
-                            <a href="#" class="our-products__card_btn btn">
-                                В магазин    
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="our-products__card">
-                    <picture class="our-products__card-img">
-                        <source 
-                            srcset="./img/shop-item-desk3.jpg"
-                            media="(min-width: 1201px)">
-                        <source 
-                            srcset="./img/shop-item-tablet3.jpg"
-                            media="(min-width: 741px)">
-                        <source 
-                            srcset="./img/shop-item-mobile3.jpg"
-                            media="(min-width: 0px)">
-                        <img src="img/shop-item-desk3.jpg" alt="">
-                    </picture>
-                    <div class="our-products__card-offer">
-                        <h2 class="our-products__card_title">
-                            Шестиугольная рамка
-                        </h2>
-                        <p class="our-products__card_text">
-                            Необычная рамка для украшения дома из видео <a href="#" class="our-products__card_text-link">«Как сделать рамку из подручных средств за 30 минут»</a>
-                        </p>
-                        <div class="our-products__card_price-btn">
-                            <div class="our-products__card_price-wrap">
-                                <span class="our-products__card_price">
-                                    500 Р
-                                </span>
-                                <span class="our-products__card_price-discount">
-                                    400 Р
-                                </span>
-                            </div>
-                            <a href="#" class="our-products__card_btn btn">
-                                В магазин    
-                            </a>
-                        </div>
-                    </div>
-                </div>
+          <div class="section-heading">
+            <h2 id="journal-title" tabindex="-1">Ваше время на чтение</h2>
+            <p>Можно выбрать тему. А можно позволить истории найти вас.</p>
+          </div>
+          <div class="journal__tools" hidden>
+            <form class="search" role="search">
+              <label class="visually-hidden" for="search"
+                >Найти материал по заголовку или описанию</label
+              ><input
+                id="search"
+                name="q"
+                type="search"
+                placeholder="Что хочется почитать?"
+                maxlength="120"
+                autocomplete="off"
+              /><button class="search__clear" type="button" disabled aria-label="Очистить поиск">
+                Очистить</button
+              ><button class="search__submit icon-button" type="submit" aria-label="Найти материал">
+                <svg
+                  class="icon icon--search"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="filters" role="group" aria-label="Рубрики журнала">
+              <button class="filters__button" type="button" data-category="all" aria-pressed="true">
+                Все истории</button
+              ><button
+                class="filters__button"
+                type="button"
+                data-category="travel"
+                aria-pressed="false"
+              >
+                Вне города</button
+              ><button
+                class="filters__button"
+                type="button"
+                data-category="home"
+                aria-pressed="false"
+              >
+                Дом</button
+              ><button
+                class="filters__button"
+                type="button"
+                data-category="food"
+                aria-pressed="false"
+              >
+                За столом</button
+              ><button
+                class="filters__button"
+                type="button"
+                data-category="inspiration"
+                aria-pressed="false"
+              >
+                Вдохновение</button
+              ><button
+                class="filters__button"
+                type="button"
+                data-category="craft"
+                aria-pressed="false"
+              >
+                Мастерская</button
+              ><button
+                class="filters__button filters__button--saved"
+                type="button"
+                data-category="saved"
+                aria-pressed="false"
+              >
+                Отложенное <span data-saved-count>0</span>
+              </button>
             </div>
+            <div class="journal__feedback">
+              <p class="journal__count" role="status" aria-atomic="true"></p>
+              <button class="journal__reset text-button" type="button" hidden>
+                Сбросить выбор
+              </button>
+            </div>
+          </div>
+          <div class="journal__layout">
+            <div>
+              <div class="journal__stories" id="story-list">
+                <article
+                  class="story-card"
+                  data-story-id="pervaya-tropa"
+                  data-category="travel"
+                  data-search="Первый поход без гонки за километрами Как выбрать короткий маршрут, оставить время на остановки и вернуться с желанием повторить. Вне города"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/pervaya-tropa.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/trend3.webp"
+                        width="450"
+                        height="348"
+                        alt="Путешественница с рюкзаком на тропе среди зелёных гор"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="pervaya-tropa"
+                      data-title="Первый поход без гонки за километрами"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Первый поход без гонки за километрами»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Вне города</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/pervaya-tropa.html"
+                        >Первый поход без гонки за километрами</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Как выбрать короткий маршрут, оставить время на остановки и вернуться с
+                      желанием повторить.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="utro-u-morya"
+                  data-category="travel"
+                  data-search="Утро, ради которого хочется встать раньше Небольшая прогулка у воды, термос и полчаса без списка обязательных впечатлений. Вне города"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/utro-u-morya.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/last-post1.webp"
+                        width="381"
+                        height="294"
+                        alt="Человек на светлом пляже между скалами"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="utro-u-morya"
+                      data-title="Утро, ради которого хочется встать раньше"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Утро, ради которого хочется встать раньше»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Вне города</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/utro-u-morya.html"
+                        >Утро, ради которого хочется встать раньше</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Небольшая прогулка у воды, термос и полчаса без списка обязательных
+                      впечатлений.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="zelen-na-podokonnike"
+                  data-category="home"
+                  data-search="Немного зелени на обычном подоконнике Начать с одного растения, разобраться со светом и не превращать окно в склад горшков. Дом"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/zelen-na-podokonnike.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/trend1.webp"
+                        width="450"
+                        height="348"
+                        alt="Молодые зелёные растения в небольших горшочках"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="zelen-na-podokonnike"
+                      data-title="Немного зелени на обычном подоконнике"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Немного зелени на обычном подоконнике»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Дом</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/zelen-na-podokonnike.html"
+                        >Немного зелени на обычном подоконнике</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Начать с одного растения, разобраться со светом и не превращать окно в склад
+                      горшков.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="vecher-s-muzykoy"
+                  data-category="inspiration"
+                  data-search="Вечер с музыкой, который останется с вами Меньше попыток успеть на всё, больше внимания к тому, ради чего вы пришли. Вдохновение"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/vecher-s-muzykoy.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/last-post3.webp"
+                        width="381"
+                        height="294"
+                        alt="Девушка слушает музыку на концерте под открытым небом"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="vecher-s-muzykoy"
+                      data-title="Вечер с музыкой, который останется с вами"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Вечер с музыкой, который останется с вами»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Вдохновение</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/vecher-s-muzykoy.html"
+                        >Вечер с музыкой, который останется с вами</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Меньше попыток успеть на всё, больше внимания к тому, ради чего вы пришли.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="stol-bez-povoda"
+                  data-category="food"
+                  data-search="Красивый стол в обычный вторник Собрать простой ужин из знакомой еды и достать любимую посуду без особого случая. За столом"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/stol-bez-povoda.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/last-post4.webp"
+                        width="381"
+                        height="294"
+                        alt="Деревянный стол с тарелками, салфетками и домашним обедом"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="stol-bez-povoda"
+                      data-title="Красивый стол в обычный вторник"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Красивый стол в обычный вторник»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">За столом</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/stol-bez-povoda.html">Красивый стол в обычный вторник</a>
+                    </h3>
+                    <p class="story-card__desc">
+                      Собрать простой ужин из знакомой еды и достать любимую посуду без особого
+                      случая.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="mesto-dlya-utra"
+                  data-category="home"
+                  data-search="Место для тихого утра Освободить небольшой угол комнаты для движения, чтения или нескольких минут тишины. Дом"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/mesto-dlya-utra.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/last-post2.webp"
+                        width="381"
+                        height="294"
+                        alt="Занятие йогой на открытом воздухе у воды"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="mesto-dlya-utra"
+                      data-title="Место для тихого утра"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Место для тихого утра»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Дом</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/mesto-dlya-utra.html">Место для тихого утра</a>
+                    </h3>
+                    <p class="story-card__desc">
+                      Освободить небольшой угол комнаты для движения, чтения или нескольких минут
+                      тишины.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="chehol-dlya-podushki"
+                  data-category="craft"
+                  data-search="Новый чехол для любимой подушки Несложный съёмный чехол с нахлёстом: подобрать ткань, снять мерки и собрать первую вещь для дома. Мастерская"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/chehol-dlya-podushki.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/last-post5.webp"
+                        width="381"
+                        height="294"
+                        alt="Светлая декоративная подушка с геометрическим принтом на кресле"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="chehol-dlya-podushki"
+                      data-title="Новый чехол для любимой подушки"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Новый чехол для любимой подушки»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Мастерская</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/chehol-dlya-podushki.html"
+                        >Новый чехол для любимой подушки</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Несложный съёмный чехол с нахлёстом: подобрать ткань, снять мерки и собрать
+                      первую вещь для дома.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="ramka-dlya-doma"
+                  data-category="craft"
+                  data-search="Рамка, в которой найдётся место вашему дню Дать готовой рамке новую жизнь: подобрать фон и собрать небольшую композицию из личных находок. Мастерская"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/ramka-dlya-doma.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/shop-item-desk3.webp"
+                        width="300"
+                        height="204"
+                        alt="Шестиугольная деревянная рамка рядом с белой вазой"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="ramka-dlya-doma"
+                      data-title="Рамка, в которой найдётся место вашему дню"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Рамка, в которой найдётся место вашему дню»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Мастерская</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/ramka-dlya-doma.html"
+                        >Рамка, в которой найдётся место вашему дню</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Дать готовой рамке новую жизнь: подобрать фон и собрать небольшую композицию
+                      из личных находок.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+                <article
+                  class="story-card"
+                  data-story-id="loskutnyy-zayats"
+                  data-category="craft"
+                  data-search="Лоскутный заяц с собственным характером Небольшая декоративная фигурка из двух деталей — хороший повод достать оставшиеся лоскуты. Мастерская"
+                >
+                  <div class="story-card__media">
+                    <a href="articles/loskutnyy-zayats.html" tabindex="-1" aria-hidden="true"
+                      ><img
+                        class=""
+                        src="img/shop-item-desk2.webp"
+                        width="300"
+                        height="204"
+                        alt="Яркая текстильная фигурка зайца рядом с домашними баночками"
+                        loading="lazy"
+                        decoding="async" /></a
+                    ><button
+                      class="save-button story-card__save"
+                      type="button"
+                      data-save="loskutnyy-zayats"
+                      data-title="Лоскутный заяц с собственным характером"
+                      aria-pressed="false"
+                      aria-label="Отложить статью «Лоскутный заяц с собственным характером»"
+                      hidden
+                    >
+                      <svg
+                        class="icon icon--bookmark"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark"></use></svg
+                      ><svg
+                        class="icon icon--bookmark-check"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <use href="#icon-bookmark-check"></use></svg
+                      ><span class="save-button__text">Отложить</span>
+                    </button>
+                  </div>
+                  <div class="story-card__body">
+                    <p class="story-card__category">Мастерская</p>
+                    <h3 class="story-card__title">
+                      <a href="articles/loskutnyy-zayats.html"
+                        >Лоскутный заяц с собственным характером</a
+                      >
+                    </h3>
+                    <p class="story-card__desc">
+                      Небольшая декоративная фигурка из двух деталей — хороший повод достать
+                      оставшиеся лоскуты.
+                    </p>
+                    <p class="story-card__meta">2 мин на чтение</p>
+                  </div>
+                </article>
+              </div>
+              <div class="journal__empty" hidden>
+                <h3>Пока ни одной истории</h3>
+                <p>
+                  Попробуйте другое слово или уберите рубрику. Например, поищите «дом» или «утро».
+                </p>
+                <button class="button" type="button" data-reset>Показать все истории</button>
+              </div>
+              <button
+                class="journal__more button button--outline"
+                type="button"
+                aria-controls="story-list"
+                hidden
+              >
+                Читать дальше
+              </button>
+            </div>
+            <aside class="editor-note" aria-labelledby="editor-title">
+              <p class="section-note">От редакции</p>
+              <h2 id="editor-title">Хороший день не обязательно должен быть особенным.</h2>
+              <p>
+                Иногда достаточно нового маршрута, неспешного ужина или вещи, сделанной своими
+                руками.
+              </p>
+              <p>
+                Мы собираем истории, которые хочется примерить к своей жизни. Без необходимости
+                успеть всё.
+              </p>
+              <a href="articles/utro-u-morya.html">Начать с небольшого утра</a>
+              <div class="editor-note__bookmark">
+                <svg
+                  class="icon icon--bookmark"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="#icon-bookmark"></use>
+                </svg>
+                <p>
+                  Понравилось несколько историй? Нажмите на закладку — они останутся в «Отложенном»
+                  на этом устройстве.
+                </p>
+              </div>
+              <p class="storage-note" hidden></p>
+            </aside>
+          </div>
         </div>
-    </section>
-    <footer class="footer">
+      </section>
+      <section class="workshop" id="workshop" aria-labelledby="workshop-title">
         <div class="container">
-            <div class="footer__icon-link-wrapper">
-              <ul>
-                <li><a href="#" class="footer__icon-link001" rel="nofollow noopener noreferrer" target="_blank"></a></li>
-                <li><a href="#" class="footer__icon-link002" rel="nofollow noopener noreferrer" target="_blank"></a></li>
-                <li><a href="#" class="footer__icon-link003" rel="nofollow noopener noreferrer" target="_blank"></a></li>
-              </ul>
-            </div>
-            <div class="footer__link-wrap">
-                <a href="" class="footer__link">Copyright © 2009–2019 City Blog LLC.
-                </a></div>
+          <div class="section-heading">
+            <h2 id="workshop-title">Дом начинается с мелочей</h2>
+            <p>Три небольших проекта, которые можно сделать своими руками.</p>
+          </div>
+          <div class="workshop__grid">
+            <article class="workshop__card">
+              <img
+                class=""
+                src="img/shop-item-desk1.webp"
+                width="300"
+                height="204"
+                alt="Светлая декоративная подушка с геометрическим принтом на кресле"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="workshop__frame">
+                <h3>
+                  <a href="articles/chehol-dlya-podushki.html">Новый чехол для любимой подушки</a>
+                </h3>
+                <p>
+                  Несложный съёмный чехол с нахлёстом: подобрать ткань, снять мерки и собрать первую
+                  вещь для дома.
+                </p>
+                <a class="workshop__link" href="articles/chehol-dlya-podushki.html"
+                  >Открыть мастер-класс</a
+                >
+              </div>
+            </article>
+            <article class="workshop__card">
+              <img
+                class=""
+                src="img/shop-item-desk2.webp"
+                width="300"
+                height="204"
+                alt="Яркая текстильная фигурка зайца рядом с домашними баночками"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="workshop__frame">
+                <h3>
+                  <a href="articles/loskutnyy-zayats.html"
+                    >Лоскутный заяц с собственным характером</a
+                  >
+                </h3>
+                <p>
+                  Небольшая декоративная фигурка из двух деталей — хороший повод достать оставшиеся
+                  лоскуты.
+                </p>
+                <a class="workshop__link" href="articles/loskutnyy-zayats.html"
+                  >Открыть мастер-класс</a
+                >
+              </div>
+            </article>
+            <article class="workshop__card">
+              <img
+                class=""
+                src="img/shop-item-desk3.webp"
+                width="300"
+                height="204"
+                alt="Шестиугольная деревянная рамка рядом с белой вазой"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="workshop__frame">
+                <h3>
+                  <a href="articles/ramka-dlya-doma.html"
+                    >Рамка, в которой найдётся место вашему дню</a
+                  >
+                </h3>
+                <p>
+                  Дать готовой рамке новую жизнь: подобрать фон и собрать небольшую композицию из
+                  личных находок.
+                </p>
+                <a class="workshop__link" href="articles/ramka-dlya-doma.html"
+                  >Открыть мастер-класс</a
+                >
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+      <section class="letters" aria-labelledby="letters-title">
+        <div class="container letters__inner">
+          <div>
+            <p class="section-note">Письма Noémi</p>
+            <h2 id="letters-title">Немного хорошего чтения в почтовом ящике.</h2>
+            <p>Истории для выходных, идеи для дома и повод ненадолго отложить дела.</p>
+          </div>
+          <form class="letters__form" novalidate>
+            <fieldset disabled>
+              <legend class="visually-hidden">Попробовать подписку</legend>
+              <label class="field" for="email"
+                >Ваш email<input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                  aria-describedby="email-error newsletter-note"
+              /></label>
+              <p class="field-error" id="email-error" hidden></p>
+              <button class="button" type="submit">Проверить подписку</button>
+              <p class="form-note" id="newsletter-note">
+                Учебная форма: email не отправляется и не сохраняется.
+                <a href="privacy.html">Подробнее о данных</a>
+              </p>
+              <p class="letters__status" role="status"></p>
+            </fieldset>
+            <noscript
+              ><p>Форма доступна с JavaScript. Все истории можно читать без него.</p></noscript
+            >
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="about">
+      <div class="container">
+        <div class="footer__top">
+          <a href="index.html" class="footer__logo" aria-label="Noémi — главная"
+            ><svg
+              class="brand-mark"
+              width="154"
+              height="35"
+              viewBox="0 0 3070 696"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="#noemi-brand"></use></svg
+          ></a>
+          <p class="footer__intro">
+            Небольшой журнал о том, что делает обычный день интереснее. Выбирайте свою историю и
+            читайте в своём ритме.
+          </p>
+          <button class="footer__feedback text-button" type="button" data-feedback hidden>
+            Предложить тему
+          </button>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            Учебный проект, выросший в авторский журнал.<br />Публикации подготовлены для портфолио.
+          </p>
+          <a href="privacy.html">Данные и настройки</a
+          ><a class="footer__up" href="#top"
+            >Наверх
+            <svg
+              class="icon icon--arrow-up"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <use href="#icon-arrow-up"></use></svg
+          ></a>
+        </div>
+      </div>
     </footer>
-
-    <script src="js/main.js"></script>
-</body>
+    <dialog class="feedback" aria-labelledby="feedback-title">
+      <button
+        class="feedback__close icon-button"
+        type="button"
+        data-close
+        aria-label="Закрыть окно"
+      >
+        <svg
+          class="icon icon--x"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-x"></use>
+        </svg>
+      </button>
+      <p class="section-note">Поговорим о журнале</p>
+      <h2 id="feedback-title">О чём хочется прочитать?</h2>
+      <p class="form-note">Это учебная форма. Ответы не отправляются и не сохраняются.</p>
+      <form class="feedback__form" novalidate>
+        <div class="form-errors" tabindex="-1" hidden>
+          <h3>Проверьте ответ</h3>
+          <ul></ul>
+        </div>
+        <label class="field" for="frequency"
+          >Как часто вы заглядываете в журнал?<select id="frequency" name="frequency">
+            <option>Почти каждый день</option>
+            <option>Несколько раз в неделю</option>
+            <option>Иногда</option>
+            <option>Сегодня впервые</option>
+          </select></label
+        >
+        <fieldset class="feedback__choices">
+          <legend>Подписаны ли вы на подобные рассылки?</legend>
+          <label><input type="radio" name="subscribed" value="yes" />Да</label
+          ><label><input type="radio" name="subscribed" value="no" />Нет</label>
+        </fieldset>
+        <label class="field" for="feedback-message"
+          >Ваша идея <span>(обязательно)</span
+          ><textarea
+            id="feedback-message"
+            name="message"
+            rows="4"
+            maxlength="1000"
+            required
+            aria-describedby="feedback-message-error"
+          ></textarea>
+        </label>
+        <p class="field-error" id="feedback-message-error" hidden></p>
+        <button class="button" type="submit">Проверить отзыв</button>
+        <p class="feedback__status" role="status"></p>
+      </form>
+    </dialog>
+    <div class="notice" hidden>
+      <p class="notice__message" role="status" aria-atomic="true"></p>
+      <button class="notice__undo text-button" type="button" hidden>Вернуть</button
+      ><button class="notice__close icon-button" type="button" aria-label="Скрыть сообщение">
+        <svg
+          class="icon icon--x"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <use href="#icon-x"></use>
+        </svg>
+      </button>
+    </div>
+  </body>
 </html>
